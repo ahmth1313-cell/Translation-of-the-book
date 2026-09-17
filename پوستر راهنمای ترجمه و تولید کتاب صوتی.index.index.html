@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>پوستر راهنمای ترجمه و تبدیل کتاب به پادکست با هوش مصنوعی</title>
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Google Fonts: Vazirmatn -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;600;700;800;900&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Vazirmatn', sans-serif;
+    }
+    @media print {
+      .no-print {
+        display: none !important;
+      }
+      body {
+        background: #0f172a !important;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+      .poster-container {
+        box-shadow: none !important;
+        border: none !important;
+      }
+    }
+  </style>
+</head>
+<body class="bg-slate-950 text-slate-100 min-h-screen py-8 px-4 flex flex-col items-center justify-center selection:bg-cyan-500 selection:text-white">
+
+  <!-- دکمه‌های کنترلی بالای پوستر -->
+  <div class="no-print mb-6 flex gap-3">
+    <button onclick="window.print()" class="flex items-center gap-2 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white px-5 py-2.5 rounded-full font-bold shadow-lg shadow-cyan-500/25 transition-all transform hover:-translate-y-0.5">
+      <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 17h2a2 2 0 002-2v-4a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 002 2h2m2 4h6a2 2 0 002-2v-4a2 2 0 00-2-2H9a2 2 0 00-2 2v4a2 2 0 002 2zm8-12V5a2 2 0 00-2-2H9a2 2 0 00-2 2v4h10z"></path>
+      </svg>
+      چاپ یا ذخیره PDF
+    </button>
+  </div>
+
+  <!-- بدنه اصلی پوستر -->
+  <div class="poster-container w-full max-w-3xl bg-slate-900 border border-slate-800 rounded-3xl p-8 sm:p-12 shadow-2xl relative overflow-hidden">
+    
+    <!-- نورپردازی پس‌زمینه پوستر -->
+    <div class="absolute -top-32 -right-32 w-80 h-80 bg-blue-600/20 rounded-full blur-3xl pointer-events-none"></div>
+    <div class="absolute -bottom-32 -left-32 w-80 h-80 bg-emerald-600/20 rounded-full blur-3xl pointer-events-none"></div>
+    <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-purple-600/10 rounded-full blur-3xl pointer-events-none"></div>
+
+    <!-- سربرگ پوستر -->
+    <header class="text-center relative z-10 mb-12">
+      <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-cyan-500/10 border border-cyan-500/30 text-cyan-400 text-xs sm:text-sm font-semibold mb-4 tracking-wide">
+        <span class="inline-block w-2 h-2 rounded-full bg-cyan-400 animate-ping"></span>
+        راهنمای گام‌به‌گام با ابزارهای نسل جدید AI
+      </div>
+
+      <h1 class="text-2xl sm:text-4xl font-black text-transparent bg-clip-text bg-gradient-to-r from-white via-slate-100 to-slate-400 leading-tight mb-4">
+        چگونه یک کتاب خارجی را ترجمه و به پادکست تبدیل کنیم؟
+      </h1>
+
+      <p class="text-slate-400 text-sm sm:text-base max-w-xl mx-auto leading-relaxed">
+        مسیر کامل تبدیل متون مرجع خارجی به یک کتاب منسجم فارسی و نسخه‌ی صوتی باکیفیت
+      </p>
+    </header>
+
+    <!-- تایم‌لاین مراحل -->
+    <div class="relative z-10 space-y-6">
+      
+      <!-- گام ۱: بارگذاری در دیپ‌سیک -->
+      <div class="group bg-slate-800/60 hover:bg-slate-800/90 border border-slate-700/60 hover:border-cyan-500/40 rounded-2xl p-5 sm:p-6 transition-all duration-300 flex items-start gap-4 sm:gap-6">
+        <div class="flex-shrink-0 w-12 h-12 rounded-2xl bg-cyan-500/10 border border-cyan-500/30 flex items-center justify-center text-cyan-400 font-extrabold text-xl">
+          ۱
+        </div>
+        <div class="flex-grow">
+          <div class="flex items-center justify-between gap-2 mb-1.5">
+            <h3 class="text-lg font-bold text-white group-hover:text-cyan-300 transition-colors">
+              بارگذاری فایل منبع در DeepSeek
+            </h3>
+            <span class="text-xs bg-slate-700/70 text-slate-300 px-2.5 py-1 rounded-md">آپلود سند</span>
+          </div>
+          <p class="text-slate-300 text-sm leading-relaxed">
+            فایل کتاب اورجینال (PDF یا ePub یا TXT) را به عنوان منبع پایگاه دانش به دیپ‌سیک (DeepSeek) ارائه دهید تا به ساختار کلی، زمینه تخصصی و سبک اثر مسلط شود.
+          </p>
+        </div>
+      </div>
+
+      <!-- گام ۲: ترجمه پارت به پارت -->
+      <div class="group bg-slate-800/60 hover:bg-slate-800/90 border border-slate-700/60 hover:border-blue-500/40 rounded-2xl p-5 sm:p-6 transition-all duration-300 flex items-start gap-4 sm:gap-6">
+        <div class="flex-shrink-0 w-12 h-12 rounded-2xl bg-blue-500/10 border border-blue-500/30 flex items-center justify-center text-blue-400 font-extrabold text-xl">
+          ۲
+        </div>
+        <div class="flex-grow">
+          <div class="flex items-center justify-between gap-2 mb-1.5">
+            <h3 class="text-lg font-bold text-white group-hover:text-blue-300 transition-colors">
+              ترجمه گام‌به‌گام و بخش‌بندی‌شده
+            </h3>
+            <span class="text-xs bg-slate-700/70 text-slate-300 px-2.5 py-1 rounded-md">فصل به فصل</span>
+          </div>
+          <p class="text-slate-300 text-sm leading-relaxed">
+            به جای درخواست ترجمه یکباره کل کتاب، کار را بر اساس فصول و پارت‌های کوچک‌تر جلو ببرید تا افت کیفیت پیش نیاید و یکدستی اصطلاحات حفظ شود.
+          </p>
+        </div>
+      </div>
+
+      <!-- گام ۳: یکپارچه‌سازی و ویراستاری -->
+      <div class="group bg-slate-800/60 hover:bg-slate-800/90 border border-slate-700/60 hover:border-indigo-500/40 rounded-2xl p-5 sm:p-6 transition-all duration-300 flex items-start gap-4 sm:gap-6">
+        <div class="flex-shrink-0 w-12 h-12 rounded-2xl bg-indigo-500/10 border border-indigo-500/30 flex items-center justify-center text-indigo-400 font-extrabold text-xl">
+          ۳
+        </div>
+        <div class="flex-grow">
+          <div class="flex items-center justify-between gap-2 mb-1.5">
+            <h3 class="text-lg font-bold text-white group-hover:text-indigo-300 transition-colors">
+              تنظیم و یکپارچه‌سازی متن نهایی
+            </h3>
+            <span class="text-xs bg-slate-700/70 text-slate-300 px-2.5 py-1 rounded-md">ویراستاری</span>
+          </div>
+          <p class="text-slate-300 text-sm leading-relaxed">
+            پارت‌های ترجمه شده را ادغام کنید، لحن متن را بازبینی و روان‌سازی کنید و از سازگاری علائم نگارشی و فهرست مندرجات اطمینان یابید.
+          </p>
+        </div>
+      </div>
+
+      <!-- گام ۴: تبدیل به صوت با جمنای -->
+      <div class="group bg-slate-800/60 hover:bg-slate-800/90 border border-slate-700/60 hover:border-purple-500/40 rounded-2xl p-5 sm:p-6 transition-all duration-300 flex items-start gap-4 sm:gap-6">
+        <div class="flex-shrink-0 w-12 h-12 rounded-2xl bg-purple-500/10 border border-purple-500/30 flex items-center justify-center text-purple-400 font-extrabold text-xl">
+          ۴
+        </div>
+        <div class="flex-grow">
+          <div class="flex items-center justify-between gap-2 mb-1.5">
+            <h3 class="text-lg font-bold text-white group-hover:text-purple-300 transition-colors">
+              تولید پادکست صوتی با Gemini در Google AI Studio
+            </h3>
+            <span class="text-xs bg-slate-700/70 text-slate-300 px-2.5 py-1 rounded-md">صوت شفاف</span>
+          </div>
+          <p class="text-slate-300 text-sm leading-relaxed">
+            متن بازبینی‌شده را وارد گوگل استودیو کرده و با استفاده از توانایی‌های صوتی مدل‌های جمنای، آن را به فایلی شنیدنی، رسا و مناسب پادکست تبدیل کنید.
+          </p>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- بنر پایانی و تبریک -->
+    <footer class="relative z-10 mt-10">
+      <div class="p-6 rounded-2xl bg-gradient-to-r from-emerald-500/20 via-teal-500/20 to-cyan-500/20 border border-emerald-500/40 text-center relative overflow-hidden">
+        <div class="inline-flex items-center justify-center w-12 h-12 rounded-full bg-emerald-500/20 text-emerald-400 mb-3">
+          <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20">
+            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+          </svg>
+        </div>
+        <h4 class="text-xl font-black text-emerald-300 mb-1">
+          تبریک می‌گوییم!
+        </h4>
+        <p class="text-slate-200 text-sm sm:text-base font-medium">
+          به همین راحتی یک اثر جدید و ارزشمند را آماده‌ی ورود به بازار کتب و محتوای صوتی فارسی ایران کردید.
+        </p>
+      </div>
+      
+      <!-- زیرنویس طراح -->
+      <div class="text-center text-xs text-slate-500 mt-6">
+        طراحی‌شده برای اشتراک‌گذاری در شبکه‌های اجتماعی و استوری • سازگار با پرینت و ذخیره PDF
+      </div>
+    </footer>
+
+  </div>
+
+</body>
+</html>
